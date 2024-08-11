@@ -6,24 +6,17 @@ import java.util.StringTokenizer;
 
 public class Main {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args)throws Exception {
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
-		int a = Integer.parseInt(br.readLine());
-
-		int n1[] = new int[a];
-		int n2[] = new int[a];
-
-		for (int i = 0; i < a; i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-			int b = Integer.parseInt(st.nextToken());
-			int c = Integer.parseInt(st.nextToken());
-			n1[i] = b;
-			n2[i] = c;
-			bw.write((b+c)+"\n");
+		int t = Integer.parseInt(br.readLine());
+		for(int i=0;i<t;i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine()," ");
+			int A = Integer.parseInt(st.nextToken());
+			int B = Integer.parseInt(st.nextToken());
+			bw.write(A+B+"\n");
 		}
 		bw.flush();
 	}
-
 }
