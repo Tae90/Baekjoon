@@ -4,19 +4,19 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
-
-		int H = sc.nextInt();
-		int M = sc.nextInt();
-
-		if(M<45) {
-			H = (H==0)? 23 : H-1;
-			M= 60 + (M-45);
+		Scanner sc = new Scanner(System.in); 
+			int A = sc.nextInt();
+			int B = sc.nextInt();
+			
+		if(B<45) {
+			A = (A <= 0) ? 23 : A-1;
+			B = 60+(B-45);
+			
 		}else {
-			M-=45;
+			B-=45;
 		}
-
-		System.out.println(H+" "+M);
+		
+		System.out.println(A+" "+B);
 	}
 
 }
