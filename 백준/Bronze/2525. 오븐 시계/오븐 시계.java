@@ -5,24 +5,19 @@ public class Main {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
+		int A = sc.nextInt();
+		int B = sc.nextInt();
 
-		int H = sc.nextInt();
-		int M = sc.nextInt();
-		
-		int cook = sc.nextInt();
-		
-		if(M+cook>=60) {
-		H = H+(M+cook)/60;
-		M = (M+cook)%60;
-		 if(H>23) {
-			 H-=24;
-		 }else if(M>59){
-			 M=0;
-		 }
-		}else {
-		M = M+cook;
+		int C = sc.nextInt();
+
+		int hour = (A * 60 + B + C) / 60;
+		int minute = (A * 60 + B + C) % 60;
+
+		if (hour > 23) {
+			hour -= 24;
 		}
-		System.out.println(H+" "+M);
+
+		System.out.println(hour + " " + minute);
 	}
 
 }
