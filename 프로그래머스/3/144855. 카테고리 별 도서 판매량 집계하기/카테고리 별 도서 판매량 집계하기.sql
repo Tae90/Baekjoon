@@ -1,0 +1,1 @@
+select B.CATEGORY, sum(BS.SALES) TOTAL_SALES from BOOK B join BOOK_SALES BS on B.BOOK_ID = BS.BOOK_ID where BS.SALES_DATE between '2022-01-01' and '2022-01-31' group by B.CATEGORY  order by B.CATEGORY asc 
